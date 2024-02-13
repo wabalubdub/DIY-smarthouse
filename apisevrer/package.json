@@ -1,0 +1,20 @@
+{
+  "name": "apisevrer",
+  "version": "1.0.0",
+  "description": "an api server for DIY smart house",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "prod":"node ./build/index.js",
+    "test": "test"
+  },
+  "author": "noam",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

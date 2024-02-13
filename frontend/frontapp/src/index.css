@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+.square {
+  width: 8px; /* Set the width */
+  height: 8px; /* Set the height */
+  padding: 2px; /* Adjust padding for inner space */
+  border: black; /* Remove default button border */
+  background-color: #8caccd; /* Set background color */
+  color: white; /* Set text color */
+  font-size: 10px; /* Set font size */
+  font-weight: normal; /* Set font weight */
+  text-align: center; /* Center text horizontally */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Ensure the button displays as a block */
+  cursor: pointer; /* Add cursor pointer */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
