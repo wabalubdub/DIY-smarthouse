@@ -29,6 +29,10 @@ the GW Web-server will be made to be expandable to add and remove features so as
 
 the embedded programs will be an assortment of code snippets for building the proper functionality
 
+# architecture
+
+![UML Diagram](./files/smart-house.drawio.png)
+
 # get in contact
 
 I'd love for contributions if anyone is interested

@@ -11,18 +11,24 @@ body {
   border-radius: 50%;
 }
 .square {
-  width: 8px; /* Set the width */
-  height: 8px; /* Set the height */
-  padding: 2px; /* Adjust padding for inner space */
-  border: black; /* Remove default button border */
-  background-color: #8caccd; /* Set background color */
-  color: white; /* Set text color */
-  font-size: 10px; /* Set font size */
-  font-weight: normal; /* Set font weight */
-  text-align: center; /* Center text horizontally */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Ensure the button displays as a block */
-  cursor: pointer; /* Add cursor pointer */
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 code {
