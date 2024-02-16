@@ -32,7 +32,7 @@ function turn_light(mode, light_ID, Edge_device_ID) {
   };
   return async () => {
     try {
-      const response = await fetch("http://localhost:3005", {
+      const response = await fetch("https://localhost:3005", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,9 @@ function turn_light(mode, light_ID, Edge_device_ID) {
       });
 
       const jsonData = await response.json();
-      //setResponseData(jsonData);
+      if (response.status > 200) {
+        alert(response.status);
+      }
     } catch (error) {
       console.error("Error posting data:", error);
     }
