@@ -1,19 +1,21 @@
+const API_PORT = process.env.API_PORT || 3005;
+
 export default function LightingComponent({ text, Edge_device_ID, light_ID }) {
   return (
-    <div class="rectangle-component outline-green">
+    <div class='rectangle-component outline-green'>
       <p>{text}</p>
-      <div className="buttons-container">
+      <div className='buttons-container'>
         <Light_Button
-          button_text="on"
+          button_text='on'
           Edge_device_ID={Edge_device_ID}
           light_ID={light_ID}
-          mode="on"
+          mode='on'
         />
         <Light_Button
-          button_text="off"
+          button_text='off'
           Edge_device_ID={Edge_device_ID}
           light_ID={light_ID}
-          mode="off"
+          mode='off'
         />
       </div>
     </div>
@@ -27,7 +29,7 @@ function turn_light(mode, light_ID, Edge_device_ID) {
   };
   return async () => {
     try {
-      const response = await fetch("https://localhost:3005", {
+      const response = await fetch(`https://localhost:${API_PORT}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +50,7 @@ function turn_light(mode, light_ID, Edge_device_ID) {
 function Light_Button({ button_text, Edge_device_ID, light_ID, mode }) {
   return (
     <button
-      class="button"
+      class='button'
       onClick={turn_light({ mode, light_ID, Edge_device_ID })}
     >
       {button_text}

@@ -1,7 +1,9 @@
 import React from "react";
 import LightingComponent from "./components/LightingComponent";
 
-const response = await fetch("http://localhost:3005/api/config/", {
+const API_PORT = process.env.API_PORT || 3005;
+
+const response = await fetch(`http://localhost:${API_PORT}/api/config/`, {
   method: "GET",
   headers: {
     "Content-Type": "application/json",

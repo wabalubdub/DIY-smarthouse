@@ -6,7 +6,7 @@ import cors from "cors";
 dotenv.config(); // Load environment variables from .env file
 
 const app = express();
-const PORT = process.env.PORT || 3000; // Use port 3000 or process.env.PORT if available
+const PORT = process.env.PORT || 3005; // Use port 3000 or process.env.PORT if available
 
 //mount the routs
 app.use(cors());
