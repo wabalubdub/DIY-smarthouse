@@ -1,6 +1,7 @@
 const API_PORT = process.env.API_PORT || 3005;
 
 export default function LightingComponent({ text, Edge_device_ID, light_ID }) {
+  //the full lighting component
   return (
     <div class='rectangle-component outline-green'>
       <p>{text}</p>
@@ -21,7 +22,9 @@ export default function LightingComponent({ text, Edge_device_ID, light_ID }) {
     </div>
   );
 }
+
 function turn_light(mode, light_ID, Edge_device_ID) {
+    //the lighting function component sends a post request to the api server with the mode, light id and edge device id
   var content = {
     mode: mode,
     light_ID: light_ID,
@@ -48,6 +51,7 @@ function turn_light(mode, light_ID, Edge_device_ID) {
 }
 
 function Light_Button({ button_text, Edge_device_ID, light_ID, mode }) {
+  //the lighting button to push on or off uses turn light function
   return (
     <button
       class='button'
