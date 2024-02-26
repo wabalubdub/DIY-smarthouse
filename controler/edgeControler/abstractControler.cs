@@ -97,3 +97,17 @@ public class LED_controler :light_controler{
     }
 }
 
+public class controlerFactory
+{
+    public abstractControler CreateProduct(string type, IPAddress Edge_IP, string device_name, string controler_name)
+    {
+        switch (type)
+        {
+            case "Led":
+                return new LED_controler(false, Edge_IP, device_name, controler_name);
+            default:
+                throw new ArgumentException("Invalid controller type.");
+        }
+    }
+}
+
