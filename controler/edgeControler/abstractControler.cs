@@ -1,12 +1,9 @@
-using System.Net;
+
 public abstract class abstractControler
 {
     // Abstract method
     public abstract void envoke_controler();
     
-
-    public IPAddress Edge_IP { get; set; }
-
     public string device_name { get; set; }
 
     public string controler_name { get; set; }
@@ -31,13 +28,13 @@ public class light_controler : abstractControler
     }
 
     // Setter method to change the state of the switch to "on"
-    public void TurnOn()
+    public virtual void TurnOn()
     {
         //turn off  logic here
     }
 
     // Setter method to change the state of the switch to "off"
-    public void TurnOff()
+    public virtual void TurnOff()
     {
         //turn off  logic here
     }
@@ -49,12 +46,11 @@ public class light_controler : abstractControler
     }
 
     // Constructor
-    public light_controler(bool initialState, IPAddress Edge_IP, string device_name, string controler_name)
+    public light_controler(bool initialState, string device_name, string controler_name)
     {
         isOn = initialState;
-        this.device_name.set(device_name);
-        this.controler_name.set(controler_name);
-        this.Edge_IP.set(Edge_IP);
+        this.device_name = device_name;
+        this.controler_name = controler_name;
     }
 
     // Implementation of abstract method
@@ -73,38 +69,44 @@ public class light_controler : abstractControler
 public class LED_controler :light_controler{
     // Constructor and invoke is inherited from light_controler
 
-    
+    public LED_controler(bool initialState, string device_name, string controler_name) : base(initialState,device_name,controler_name)
+    {
+
+    }
     public void start_up_sequence(){
         //insert logic here
     }
 
-    public void shut_down_sequence();
+    public void shut_down_sequence()
     {
         //insert logic here
     }
 
-    public void on_state();
-    
+    public void on_state(){
+        throw new ArgumentException("method not impemented.");
+
+    }
+
     // Method overriding the on and off  from the light_controler
     public override void TurnOff()
     {
-        this.shut_down_sequence()
+        this.shut_down_sequence();
     }
     public override void TurnOn()
     {
-        this.start_up_sequence()
-        this.on_state()
+        this.start_up_sequence();
+        this.on_state();
     }
 }
 
 public class controlerFactory
 {
-    public abstractControler CreateProduct(string type, IPAddress Edge_IP, string device_name, string controler_name)
+    public abstractControler CreateProduct(string type, string device_name, string controler_name)
     {
         switch (type)
         {
             case "Led":
-                return new LED_controler(false, Edge_IP, device_name, controler_name);
+                return new LED_controler(false, device_name, controler_name);
             default:
                 throw new ArgumentException("Invalid controller type.");
         }
