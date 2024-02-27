@@ -17,7 +17,7 @@ public class Router{
 
     }
 
-    public void add_device_IP(string device_name, System.Net.IPAddress IP ){
+    private void add_device_IP(string device_name, System.Net.IPAddress IP ){
         IP_cache[device_name]= IP;
     }
 
@@ -31,6 +31,7 @@ public class Router{
     }
 
     public async Task send_put( IPAddress device_IP_to_send, string PORT, string route, string json){
+            // request is sent to the ip of the device and the rout is the name of the controler
         string url = $"http://{device_IP_to_send}:{PORT}/{route}";
         using (HttpClient client = new HttpClient())
         {
@@ -53,7 +54,8 @@ public class Router{
         }
     }
 
-    public System.Net.IPAddress get_IP(string device_name ){
+    private System.Net.IPAddress get_IP(string device_name ){
+        // TODO send a request to the api server and get the ip from the name
         
         string ipv4String = "192.168.1.1";
         IPAddress ipAddressV4 = IPAddress.Parse(ipv4String);
