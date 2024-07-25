@@ -1,5 +1,6 @@
+using System.Text.Json;
 
-namespace smarthouse.Devices
+namespace smarthouse.Modles
 {
     public abstract class Device{
         public  string Type { get; set; }
