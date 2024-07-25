@@ -10,7 +10,7 @@ for example I can use a servo to turn on my light switch instead of using a rela
 
 ![Image of a smart lightswitch](./images/lightswitch_addon_with_servo.jpeg)
 
-the micro-controller would be connected to my local WIFI in the house and get HTTP requests from any source.
+The micro-controller would be connected to my local WIFI in the house and get HTTP requests from any source.
 
 # design
 
