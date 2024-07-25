@@ -8,9 +8,8 @@ namespace smarthouse.Modles
         public string Name{ get; set; }
         public string IP{ get; set; }
 
-        public override string ToString(){
-            return JsonSerializer.Serialize<Device>(this);
-        }
+        public override string ToString()=> JsonSerializer.Serialize<Device>(this);
+        
 
     }
 }
