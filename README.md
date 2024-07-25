@@ -8,7 +8,7 @@ The idea is that micro-controllers are super cheap and that using a local LAN ne
 
 for example I can use a servo to turn on my light switch instead of using a relay in the light switch's actual mechanism:
 
-![Image of a smart lightswitch][https://github.com/wabalubdub/DIY-smarthouse/tree/main/images/lightswitch_addon_with_servo.jpeg "lightswitch"]
+![Image of a smart lightswitch](./images/lightswitch_addon_with_servo.jpeg)
 
 the micro-controller would be connected to my local WIFI in the house and get HTTP requests from any source.
 
