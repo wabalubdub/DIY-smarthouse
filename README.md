@@ -6,9 +6,9 @@ This project is an attempt to build a Do It Yourself smart-house out of of thing
 
 The idea is that micro-controllers are super cheap and that using a local LAN network you can make little devices that could communicate with each other and with you in a very simple way. I like it because its fun and because using micro-controlers on to of existing hardware in and around the house is slightly less invasive then getting in of the shelf solution.
 
-for example i can use a servo to turn on my light switch instead of using a relay in the light switch's actual mechanism:
+for example I can use a servo to turn on my light switch instead of using a relay in the light switch's actual mechanism:
 
-![Image of a smart lightswitch][https://github.com/wabalubdub/DIY-smarthouse.git/images/lightswitch addon with servo.jpeg]
+![Image of a smart lightswitch][https://github.com/wabalubdub/DIY-smarthouse.git/images/lightswitch_addon_with_servo.jpeg "lightswitch"]
 
 the micro-controller would be connected to my local WIFI in the house and get HTTP requests from any source.
 
