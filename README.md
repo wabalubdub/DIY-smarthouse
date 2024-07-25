@@ -4,7 +4,7 @@ redesign:
 
 This project is an attempt to build a Do It Yourself smart-house out of of things i can build using simple electronics, 3D printing and software.
 
-The idea is that micro-controllers are super cheap and that using a local LAN network you can make little devices that could communicate with each other and with you in a very simple way. I like it because its fun and because using microcontrolers on to of existing hardware in and around the house is slightly less invasive then getting in of the shelf solution.
+The idea is that micro-controllers are super cheap and that using a local LAN network you can make little devices that could communicate with each other and with you in a very simple way. I like it because its fun and because using micro-controlers on to of existing hardware in and around the house is slightly less invasive then getting in of the shelf solution.
 
 for example i can use a servo to turn on my light switch instead of using a relay in the light switch's actual mechanism:
 
