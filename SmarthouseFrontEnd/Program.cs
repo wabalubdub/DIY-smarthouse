@@ -1,15 +1,14 @@
 using smarthouse.Services;
 using smarthouse.Modles;
 
-Device[] devices= {new Device(), new Device()};
 
-Console.WriteLine(devices[0]);
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<DeviceService>();
+builder.Services.AddTransient<CommunicationService>();
 
 
 var app = builder.Build();
