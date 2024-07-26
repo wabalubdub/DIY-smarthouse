@@ -9,6 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<DeviceService>();
 builder.Services.AddTransient<CommunicationService>();
+builder.Services.AddTransient<CommandService>();
 
 
 var app = builder.Build();
