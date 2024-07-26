@@ -32,8 +32,8 @@ namespace smarthouse.Commands
             _percent = percent;
         }
 
-        public void Execute(){
-            _communicationService.SendHttpGet(_device.IP,_device.Id, new DimmerRequest(_percent).ToString() );
+        public async Task Execute(){
+            await _communicationService.SendHttpGet(_device.IP,_device.Id, new DimmerRequest(_percent).ToString() );
         }
 
     }

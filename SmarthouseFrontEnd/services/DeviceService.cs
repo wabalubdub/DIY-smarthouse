@@ -18,11 +18,15 @@ namespace smarthouse.Services
         public IEnumerable<Device> GetDevices()
         {
             using var jsonFileReader = File.OpenText(JsonFileName);
-            return JsonSerializer.Deserialize<Device[]>(jsonFileReader.ReadToEnd(),
+            Device[]? devices = JsonSerializer.Deserialize<Device[]>(jsonFileReader.ReadToEnd(),
                 new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true
                 });
+                if (devices == null){
+                    return Enumerable.Empty<Device>();
+                }
+                return devices;
         }
 
         

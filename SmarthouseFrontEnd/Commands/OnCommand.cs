@@ -17,9 +17,10 @@ namespace smarthouse.Commands
             _device = device;
         }
 
-        public void Execute(){
+        public async Task Execute(){
             OnOffRequest request =  new OnOffRequest("on");
-            _communicationService.SendHttpGet(_device.IP,_device.Id,request.ToString());
+            await _communicationService.SendHttpGet(_device.IP,_device.Id,request.ToString());
+            
         }
 
     }
