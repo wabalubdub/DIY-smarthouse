@@ -2,7 +2,7 @@ using smarthouse.Modles;
 using System.Text.Json;
 
 
-namespace smarthouse.services
+namespace smarthouse.Services
 {
     public class DeviceService
     {

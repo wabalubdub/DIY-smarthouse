@@ -1,4 +1,9 @@
-using smarthouse.services;
+using smarthouse.Services;
+using smarthouse.Modles;
+
+Device[] devices= {new Device(), new Device()};
+
+Console.WriteLine(devices[0]);
 
 var builder = WebApplication.CreateBuilder(args);
 

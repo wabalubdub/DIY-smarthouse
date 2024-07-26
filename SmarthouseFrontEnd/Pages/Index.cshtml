@@ -8,3 +8,9 @@
     <h1 class="display-4">DIY Smarthouse</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@foreach (var device in Model.devices)
+{
+    <h2>@device.Name</h2>
+}
+
