@@ -1,20 +1,11 @@
 ﻿@page
+@using SmarthouseFrontEnd.components
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">DIY Smarthouse</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@(await Html.RenderComponentAsync<SmarthouseComponent>(RenderMode.ServerPrerendered))
 
-<div class= "card-columns">
-@foreach (var device in Model.devices)
-{
-    <div class="card-img" style="background-image: url('https://www.self-build.co.uk/wp-content/uploads/2018/10/Smart-home-systems-UK-Worthy-exterior.jpg')"></div>
-    <div class = "card-body"> <h5 class = "card-title"> @device.Name </h5></div>
 
-}
-</div>
-
+<script src="_framework/blazor.server.js"></script>

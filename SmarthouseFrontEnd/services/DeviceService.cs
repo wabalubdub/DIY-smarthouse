@@ -29,6 +29,10 @@ namespace smarthouse.Services
                 return devices;
         }
 
+        public Device GetDeviceByID(string id)
+        {
+            return this.GetDevices().First(x => x.Id == id);
+        }
         
     }
 }
