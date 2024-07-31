@@ -1,0 +1,30 @@
+
+
+
+@inject DeviceServiceWrapper deviceService
+@inject ICommunicationService comunicationService
+@inject ICommandService commandService
+
+@rendermode InteractiveServer
+
+
+
+<button class="btn btn-primary" @onclick="TurnDeviceOn">Turn on</button>
+<p>@done</p>
+<p>@DeviceId</p>
+
+
+@code {
+
+    [Parameter]
+    public string DeviceId{get;set;} ="1";
+    private string done = "true";
+
+    async Task TurnDeviceOn(){
+        Device device = deviceService.GetDeviceByID(DeviceId);
+        ISmarthouseCommand command = new OnCommand( comunicationService,device);
+        await commandService.ExecuteCommand(command);
+
+    }
+
+}

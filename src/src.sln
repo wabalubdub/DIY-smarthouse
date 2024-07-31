@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{D290C589-0667-4C1B-8430-EFE3D16EBDEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smarthouse.Backend", "backend\Smarthouse.Backend\Smarthouse.Backend.csproj", "{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{07BE872C-5391-439D-A9E2-F6256603D405}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smarthouse.frontend", "frontend\Smarthouse.frontend\Smarthouse.frontend.csproj", "{EFEAB661-17D8-4C3E-B190-E9E13B6A725A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C453094E-48AA-4A5E-94C3-664278DF51E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smarthouse.test", "test\Smarthouse.test\Smarthouse.test.csproj", "{37368358-4738-4889-A661-8D81E14E4D64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFEAB661-17D8-4C3E-B190-E9E13B6A725A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFEAB661-17D8-4C3E-B190-E9E13B6A725A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFEAB661-17D8-4C3E-B190-E9E13B6A725A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFEAB661-17D8-4C3E-B190-E9E13B6A725A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37368358-4738-4889-A661-8D81E14E4D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37368358-4738-4889-A661-8D81E14E4D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37368358-4738-4889-A661-8D81E14E4D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37368358-4738-4889-A661-8D81E14E4D64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48D29DFF-7A59-4D65-ABF2-C2F1A4DD1AC1} = {D290C589-0667-4C1B-8430-EFE3D16EBDEA}
+		{EFEAB661-17D8-4C3E-B190-E9E13B6A725A} = {07BE872C-5391-439D-A9E2-F6256603D405}
+		{37368358-4738-4889-A661-8D81E14E4D64} = {C453094E-48AA-4A5E-94C3-664278DF51E4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EF302C8-2B64-4DDA-9D57-015D25FA25A0}
+	EndGlobalSection
+EndGlobal
