@@ -9,7 +9,7 @@
 
 
 
-<button class="btn btn-primary" @onclick="TurnDeviceOn">Turn On</button>
+<button class="btn btn-primary" @onclick="TurnDeviceOn">Turn Off</button>
 
 
 @code {
@@ -19,9 +19,9 @@
 
     async Task TurnDeviceOn(){
         Device device = deviceService.GetDeviceByID(DeviceId);
-        ISmarthouseCommand command = new OnCommand( comunicationService,device);
+        ISmarthouseCommand command = new OffCommand( comunicationService,device);
         await commandService.ExecuteCommand(command);
-
+        
     }
 
 }

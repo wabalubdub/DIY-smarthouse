@@ -42,5 +42,8 @@ namespace Smarthouse.Backend.Models
         }
 
         public override string ToString()=> JsonSerializer.Serialize<Device>(this); 
+    
+        public bool IsOnOff() => DeviceType == EDeviceType.onoff;
+        public bool IsDimmer() => DeviceType ==EDeviceType.dimmer;
     }
 }

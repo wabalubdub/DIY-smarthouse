@@ -1,0 +1,62 @@
+@inject IJSRuntime JS
+
+@inject DeviceServiceWrapper deviceService
+@inject ICommunicationService comunicationService
+@inject ICommandService commandService
+
+@rendermode InteractiveServer
+
+<div class="slider-container" @ref="sliderRef" @onmousedown="StartDragging" @onmousemove="Drag" @onmouseup="StopDragging">
+    <div class="slider">
+        <div class="slider-point" style="left:@Percentage%;"></div>
+    </div>
+    <div class="percentage-display">
+        @Percentage.ToString("F0")%
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string DeviceId{get;set;} ="1";
+
+    async Task sendDimmerCommand(){
+        Device device = deviceService.GetDeviceByID(DeviceId);
+        ISmarthouseCommand command = new DimmerCommand( comunicationService,device,(int)Percentage);
+        await commandService.ExecuteCommand(command);
+
+    }
+
+    [Parameter]
+    public double Percentage { get; set; } = 0;
+
+    private bool isDragging = false;
+    private ElementReference sliderRef;
+
+    private void StartDragging(MouseEventArgs e)
+    {
+        isDragging = true;
+        Drag(e); // Update the position immediately on click
+    }
+
+    private async void StopDragging(MouseEventArgs e)
+    {
+        isDragging = false;
+        sendDimmerCommand();
+    }
+
+    private async  void Drag(MouseEventArgs e)
+    {
+        if (isDragging)
+        {
+            var boundingRect = await JS.InvokeAsync<BoundingClientRect>("dimmerSlider.GetBoundingClientRect", sliderRef);
+            var newPercentage = (e.ClientX - boundingRect.Left) / boundingRect.Width * 100;
+            Percentage = Math.Clamp(newPercentage, 0, 100);
+        }
+    }
+
+public class BoundingClientRect
+    {
+        public double Left { get; set; }
+        public double Width { get; set; }
+    }
+}

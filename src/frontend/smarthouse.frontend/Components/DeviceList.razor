@@ -1,0 +1,37 @@
+@using Smarthouse.frontend.Services 
+@inject DeviceServiceWrapper deviceService
+
+
+<div class="card-columns">
+    @foreach (var device in deviceService.GetDevices())
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('images/lightSwitch.jpg');">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">@device.Name</h5>
+            </div>
+            <div class="card-footer">
+                @if (device.IsOnOff()){
+                    <small class="text-muted">
+                    <OnOffButtonSet DeviceId=@device.Id></OnOffButtonSet>
+                </small>
+                }
+                @if (device.IsDimmer()){
+                    <small class="text-muted">
+                    <DimmerSlider DeviceId=@device.Id></DimmerSlider>
+                </small>
+                }
+                
+            </div>
+        </div>
+    }
+</div>
+
+
+@code {
+
+
+    
+
+}
