@@ -8,12 +8,22 @@
 .card-columns .card-body {
   height: 100px;
   font-family: "Nunito", sans-serif;
-  background: #fbfafd;
+  background: #c0c0c0;
+}
+
+.card-columns .card-img-container {
+  height: 200px;
+  vertical-align: middle;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 0.8;
 }
 
 .card-columns .card-img {
-  height: 330px;
-  vertical-align: bottom;
+  height: 200px;
+  width: 200px;
+  vertical-align: middle;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -22,7 +32,7 @@
 
 .modal .card-img {
   height: 500px;
-  vertical-align: bottom;
+  vertical-align: middle;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -34,5 +44,9 @@
     0 4px 8px rgba(37, 33, 82, 0.06);
 }
 .card-footer {
-  background: #fbfafd;
+  background: #b1b1b1;
+}
+.card-title {
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
 }

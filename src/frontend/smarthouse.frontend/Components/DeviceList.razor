@@ -6,8 +6,9 @@
     @foreach (var device in deviceService.GetDevices())
     {
         <div class="card">
-            <div class="card-img" style="background-image: url('images/lightSwitch.jpg');">
-            </div>
+            <div class="card-img-container">
+                <img src="images/lightswitch.png" alt="Lightswitch" class="card-img">
+                </div>
             <div class="card-body">
                 <h5 class="card-title">@device.Name</h5>
             </div>
