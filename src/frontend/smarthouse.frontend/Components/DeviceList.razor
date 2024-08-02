@@ -1,4 +1,5 @@
 @using Smarthouse.frontend.Services 
+@using Smarthouse.Backend.Models 
 @inject DeviceServiceWrapper deviceService
 
 
@@ -7,7 +8,7 @@
     {
         <div class="card">
             <div class="card-img-container">
-                <img src="images/lightswitch.png" alt="Lightswitch" class="card-img">
+                <img src=@getPNGUrl(device) alt="Lightswitch" class="card-img">
                 </div>
             <div class="card-body">
                 <h5 class="card-title">@device.Name</h5>
@@ -32,6 +33,17 @@
 
 @code {
 
+    private string getPNGUrl(Device device){
+        if (device.IsOnOff()){
+            return "images/lightswitch.png";
+        }
+        if (device.IsDimmer())
+        {
+            return "images/meter.png";
+        }
+        return "";
+
+    }
 
     
 
